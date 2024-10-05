@@ -1,0 +1,34 @@
+This is Ayush Tiwari here :
+E-mail id: ayuuutube@gmail.com
+Phone: 7355075433
+
+# Meaning of your task is : I have to develop a backend to deal with DoS(denial of service) where I have 
+to prevent websit from exploiting from scammers to limit a request (1 request per second and 20 request
+per minutes)
+
+# dependencies:
+express js,
+dotenv
+
+# How I deal with this task:
+Backend :-
+In backend I divided it into 3 part:-
+1.controllers
+2.middleware
+3.other important file likes(node module , env,etc)
+
+controllers:-
+This is the important directory where the base file stored (FinTarget.js).
+In this file all the important dependencies exports
+
+middleware:-
+In middleware I have attempt to manage the code easier.
+* taking userId
+* making request
+* manage the request if request is more than 20 stop it.
+
+# Frontend:-
+
+I have develop a frontend part to manage the backend simply where I make the 2 APIs and manage the backend
+with it .
+In the output section I have changing the output constantly to make the thinking easier

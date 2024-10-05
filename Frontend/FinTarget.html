@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTarget</title>
+</head>
+
+<body>
+    <h1>Hit the Api for checking the rate limiter</h1>
+    <button id="api1">Hit API 1</button>
+    <button id="api2">Hit API 2</button>
+    <pre id="output"> </pre>
+    <script>
+        // selecting the api by using the Id
+        const api1 = document.getElementById('api1')
+        const api2 = document.getElementById('api2')
+        const output = document.getElementById('output')
+        //    adding the event listener (when we click it will hit their functions)
+        api1.addEventListener('click', () => hitApi(1))
+        api1.addEventListener('click', () => hitApi(2))
+        // call back function 
+        async function hitApi(id) {
+            const res = await fetch(`/api/v1/task`,
+                { method: 'POST' })
+                .then(t => t.json()) //response converted in json format
+            output.innerText += `\nResponse: ${res.response} Calls = ${res.callsInMinutes}` //append output in a text
+        }
+
+    </script>
+</body>
+
+</html>
